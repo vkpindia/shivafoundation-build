@@ -1,0 +1,311 @@
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  top: 40% !important;
+  left: 8% !important;
+  z-index: 10;
+  text-align: left !important;
+  h1 {
+    font-weight: 600;
+  }
+}
+
+.picsum-img-wrapper {
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.who-section {
+  border-top: 10px solid #ff7107;
+  .section-head {
+    h2 {
+      position: relative;
+      font-size: 2.3rem;
+      font-weight: bold;
+      padding-bottom: 5px;
+      padding-top: 20px;
+    }
+    .heading-separator {
+      width: 130px;
+      background: #cccccc;
+      height: 1px;
+      margin: 0px auto;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background: #ff7107;
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 100%;
+      }
+      &:before {
+        position: absolute;
+        top: -8px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fff;
+        border: 1px solid #000000;
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .home-cnt {
+    background: #f8f8f8;
+    padding: 75px 0;
+    .home-cnt-1 {
+      padding-bottom: 50px;
+      &:last-child {
+        padding-bottom: 0px !important;
+      }
+      .home-cnt-img {
+        img {
+          width: 100%;
+        }
+      }
+      .home-cnt-info {
+        padding: 0px 30px 0 30px;
+        &.odd-info {
+          text-align: right;
+          h3 {
+            position: relative;
+            &:after {
+              background-color: #ff7107;
+              bottom: 13px;
+              content: '';
+              height: 1px;
+              position: absolute;
+              right: 0px;
+              width: 70px;
+            }
+            &:before {
+              display: none;
+            }
+          }
+        }
+        h3 {
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          padding-bottom: 20px;
+          position: relative;
+          &:before {
+            background-color: #ff7107;
+            bottom: 13px;
+            content: '';
+            height: 1px;
+            position: absolute;
+            left: 0px;
+            width: 70px;
+          }
+        }
+        p {
+          color: #555;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.btn-caption {
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255, 0.9);
+  padding: 11px 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  &:hover {
+    background-color: #ff7107;
+    border: 1px solid #ff7107;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+.py-section {
+  background-image: url(/assets/images/donate-05.jpg);
+  background-repeat: no-repeat;
+  height: 400px;
+  max-height: 400px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 40px 0;
+  .py-donation {
+    text-align: center;
+    .py-head {
+      h2 {
+        position: relative;
+        font-weight: bold;
+        /* padding-bottom: 5px;
+        padding-top: 20px; */
+      }
+      .heading-separator {
+        width: 200px;
+        background: #cccccc;
+        height: 1px;
+        margin: 0px auto;
+        position: relative;
+        &:after {
+          position: absolute;
+          top: -5px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          background: #ff7107;
+          content: '';
+          width: 9px;
+          height: 9px;
+          border-radius: 100%;
+        }
+        &:before {
+          position: absolute;
+          top: -8px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          background: #fff;
+          border: 1px solid #000000;
+          content: '';
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+        }
+      }
+    }
+    .py-text {
+      padding: 20px 0;
+    }
+    .py-btn {
+      a {
+        background-color: #ff7107;
+        border: 1px solid #ff7107;
+        padding: 11px 22px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        &:hover {
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+        img {
+          width: 30px;
+        }
+      }
+    }
+    .py-img {
+      padding-top: 5px;
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.bg-tranparent {
+  background: transparent;
+}
+.text-orengered {
+  color: #ff7107;
+}
+.bg-orengered {
+  background-color: #ff7107;
+}
+
+@media (max-width: 767px) {
+  .picsum-img-wrapper {
+    img {
+      max-height: 380px !important;
+    }
+  }
+  .carousel-caption {
+    h1 {
+      font-size: 1.8rem !important;
+    }
+  }
+  .who-section {
+    .section-head {
+      h2 {
+        font-size: 22px !important;
+      }
+      .heading-separator {
+        width: 95px;
+      }
+    }
+    .home-cnt {
+      padding: 30px 0 !important;
+      .home-cnt-1 {
+        padding-bottom: 20px !important;
+        .home-cnt-info {
+          h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-bottom: 20px !important;
+            padding-top: 20px;
+          }
+        }
+      }
+      .home-info-even {
+        order: 2;
+        .odd-info {
+          text-align: left !important;
+          h3 {
+            &:after {
+              background-color: #ff7107;
+              bottom: 13px;
+              content: '';
+              height: 1px;
+              position: absolute;
+              left: 0px !important;
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .py-section {
+    height: 300px;
+    .py-donation {
+      .py-head {
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.carousel-control-next-icon {
+  position: relative;
+  &:after {
+    background-color: #ff7107;
+    // bottom: 13px;
+    content: '';
+    position: absolute;
+    // left: 0px !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 100%;
+  }
+}

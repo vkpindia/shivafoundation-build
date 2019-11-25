@@ -1,0 +1,283 @@
+.header-section {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  .navbar {
+    padding: 0 !important;
+  }
+  &.menu-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    .header-top {
+      display: none;
+    }
+    .header-bottom {
+      background-color: #fff;
+      .navbar-nav {
+        border-bottom-right-radius: 0px !important;
+      }
+      .navbar-brand {
+        padding: 2px 0 !important;
+      }
+      .donate-button {
+        button {
+          border-bottom-right-radius: 0 !important;
+        }
+      }
+    }
+  }
+  &.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+  &.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .header-top {
+    .header-top-section {
+      display: flex;
+      align-items: center;
+      padding: 17px 0px;
+      padding-bottom: 13px;
+      overflow: hidden;
+      font-size: 12px;
+      line-height: 18px;
+      .header-top-left {
+        flex: 1;
+        li {
+          display: flex;
+          align-items: center;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        li {
+          a,
+          i {
+            color: #fff;
+            font-weight: 400;
+          }
+          p {
+            margin: 0px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+      .header-top-right {
+        li {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  .header-bottom {
+    .navbar-default {
+      .navbar-menu {
+        background-color: #fff;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .navbar-collapse {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        .navbar-nav {
+          float: right;
+          margin-right: 103px;
+          border-bottom-right-radius: 50px;
+          background-color: #fff;
+          position: relative;
+          z-index: 10;
+          width: 100%;
+          justify-content: flex-end;
+          .active-link {
+            color: #ff7107 !important;
+          }
+          li {
+            &.menu-active {
+              a {
+                color: #ff7107;
+              }
+              .active {
+                color: #ff7107;
+              }
+            }
+            a {
+              padding: 25px 17px;
+              color: #383634;
+              font-weight: 600;
+              text-transform: uppercase;
+              background-color: transparent;
+              &:hover {
+                color: #ff7107;
+              }
+            }
+            &:last-child {
+              a {
+                padding-right: 32px;
+              }
+            }
+          }
+        }
+      }
+      .navbar-header {
+        a {
+          // padding: 18px;
+          padding: 2px 20px;
+          img {
+            // max-width: 100%;
+            max-width: 150px;
+            max-height: 70px;
+            width: 150px;
+          }
+        }
+      }
+      .donate-button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 5;
+        button {
+          border: none;
+          background-color: #ff7107;
+          padding: 13px 23px;
+          padding-left: 70px;
+          color: #fff;
+          text-transform: uppercase;
+          border-bottom-right-radius: 50px;
+          outline: none;
+        }
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-section {
+    &.menu-fixed {
+      /*       .navbar-default {
+        .donate-button {
+          position: relative !important;
+          text-align: center;
+          font-size: 14px;
+        }
+      } */
+    }
+    .navbar-default {
+      padding: 5px 0px !important;
+    }
+    .header-bottom {
+      background-color: #fff;
+      .navbar-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        a {
+          padding: 0px !important;
+          flex: 1;
+          z-index: 99;
+          img {
+            max-width: 120px !important;
+            max-height: 50px !important;
+            width: 120px !important;
+          }
+        }
+        .navbar-toggler {
+          order: 2;
+          outline: 0;
+          z-index: 99;
+        }
+      }
+      .scrollable-element {
+        scrollbar-width: thin;
+      }
+      .navbar-nav::-webkit-scrollbar {
+        width: 5px;
+      }
+      .navbar-nav::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+      /* Handle */
+      .navbar-nav::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 5px;
+        background: #ff7107;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      }
+      ::-webkit-scrollbar-thumb:window-inactive {
+        background: #ff7107;
+      }
+      .navbar-nav {
+        margin: 0px !important;
+        height: 300px;
+        overflow-y: auto;
+        float: left;
+        width: 100%;
+        text-align: center !important;
+        font-size: 13px;
+        display: block;
+        scrollbar-width: thin;
+        li {
+          a {
+            padding: 20px 17px !important;
+          }
+          &:last-child {
+            a {
+              padding-right: 17px !important;
+            }
+          }
+        }
+      }
+      .donate-button {
+        position: relative !important;
+        text-align: center;
+        font-size: 14px;
+        button {
+          padding: 5px 15px !important;
+          border-bottom-right-radius: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top-section {
+    line-height: 5px !important;
+    .header-top-left {
+      ul {
+        display: block !important;
+        span {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

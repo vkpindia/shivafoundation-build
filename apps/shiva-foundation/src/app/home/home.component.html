@@ -1,0 +1,111 @@
+<ngb-carousel #carousel interval="3000" [pauseOnHover]="true" [showNavigationIndicators]="false">
+  <ng-template ngbSlide *ngFor="let img of carouselImages; index as i">
+    <div class="carousel-caption">
+      <h1>Making A <span class='text-orengered'>Difference</span></h1>
+      <p>Learn about our passionate team, and how you can <span class='text-orengered'>help!</span></p>
+      <a href="javascript:;" class="btn-caption">Get Involved</a>
+    </div>
+    <a target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="'assets/images/'+img.imgName+'.jpg'" [alt]="img.alt">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+<section class="who-section">
+  <div class="">
+    <div class="section-head">
+      <h2 style="text-align: center;"><span class="text-orengered">ABOUT</span> US</h2>
+      <div class="heading-separator"></div>
+    </div>
+    <div class="home-cnt">
+      <div class="container">
+        <div class="home-cnt-1">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+              <div class="home-cnt-img">
+                <img src="assets/images/home-img-01.jpg" alt="Source not found">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+              <div class="home-cnt-info">
+                <h3>Our <span class="text-orengered">Team</span></h3>
+                <p>Shiva Foundation have an enthusiastic and empathetic team willing to bring changes in life of people
+                  and smile on their faces .
+                  People from all avenues of life have joined hands to contribute for this noble cause of serving
+                  humanity
+                  by in various ways.
+                  Some are committed to actively participate as volunteers whereas some have chosen to help part time.
+                  Those who could not devote their time have also come forward to help financially and by other means.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-cnt-1">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6 home-info-even">
+              <div class="home-cnt-info odd-info">
+                <h3>Our <span class="text-orengered">History</span></h3>
+                <p>Shiva Foundation was formed seeing a need for energetic,nonprofit work for old age home, providing
+                  them with basic amenities and a homely habitat. We've consistently grown since then, all thanks to the
+                  helping hands of this amazing community!
+                  Realizing the needs of poor children, we decided to extend this place to an orphanage as well because
+                  this brought more life to the place by connecting caring warm love of old people to the sheer
+                  innocence of children. We also provide education to the poor children which is a necessary step for
+                  the future of the tiny tots and our mighty nation.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+              <div class="home-cnt-img">
+                <img src="assets/images/home-img-02.jpg" alt="Source not found">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-cnt-1">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+              <div class="home-cnt-img">
+                <img src="assets/images/home-img-01.jpg" alt="Source not found">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+              <div class="home-cnt-info">
+                <h3>Our <span class="text-orengered">Mission</span></h3>
+                <p>We focus on making the maximum positive effort for Shiva Foundation family members as we call them.
+                  Our volunteers thrive to give a good life to people here by providing for food, and medical facilities
+                  to children and for old people along with nursing and care . We also support the children for their
+                  education and skills development to make them self dependent.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-section">
+  <div class="container">
+    <div class="py-donation">
+      <div class="py-head">
+        <h2 class="text-black"><span class="text-white">HELP OUR</span>&nbsp;<span class="text-orengered">CAUSE</span>
+        </h2>
+        <div class="heading-separator"></div>
+      </div>
+      <div class="py-text">
+        <p class="text-white m-0">Your support and contributions will enable us to meet our goals and improve conditions.</p>
+        <p class="text-white m-0">Your generous donation will fund our mission.</p>
+      </div>
+      <div class="py-btn">
+        <a href="javascript:;"> <img src="assets/images/ico-paypal.png" alt=""><span>Donate Now</span></a>
+      </div>
+      <div class="py-img">
+        <img src="assets/images/img-donate.png" alt="Source not found">
+      </div>
+    </div>
+  </div>
+</section>

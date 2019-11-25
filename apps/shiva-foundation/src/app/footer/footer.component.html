@@ -1,0 +1,81 @@
+<section class="footer-section">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-3 col-md-6 col-sm-6">
+          <!-- Footer our mission block -->
+          <h4>Our <span class="text-orengered">Mission</span></h4><!-- Heading -->
+          <p>We focus on making the maximum positive effort for Shiva Foundation family members as we call them. Our
+            volunteers thrive to give a good life to people here by providing for food, and medical facilities to
+            children
+            and for old people along with nursing and care. We also support the children for their education and skills
+            development to make them self dependent.</p>
+        </div><!-- Footer our mission block end-->
+        <div class="col-12 col-lg-3 col-md-6 col-sm-6">
+          <!-- Footer navigation -->
+          <h4>Quick <span class="text-orengered">Links</span></h4><!-- Heading -->
+          <ul class="footer-nav">
+            <li *ngFor="let link of navLinks">
+              <a href="" [routerLink]="link.routePath">{{link.displayName}}</a>
+            </li>
+          </ul>
+        </div><!-- Footer navigation end -->
+        <div class="col-12 col-lg-3 col-md-6 col-sm-6 social-link">
+          <!-- Footer Gallary -->
+          <h4>Social&nbsp;<span class="text-orengered">Links</span></h4><!-- Heading -->
+          <ul>
+            <li *ngFor="let sclLink of socialIcon">
+              <a href="javascript:;">
+                <span [class]="'fa'+' '+sclLink.icon+' '+'social-icon'"></span>
+                <span class="pl-2">{{sclLink.name}}</span>
+              </a>
+            </li>
+          </ul>
+        </div><!-- Footer Gallary end-->
+        <div class="col-12 col-lg-3 col-md-6 col-sm-6 cntct-block">
+          <!-- Footer contact us -->
+          <h4>Contact <span class="text-orengered">Us</span></h4><!-- Heading -->
+          <div class="d-flex pb-2">
+            <!-- Address -->
+            <span class="fa fa-location-arrow cntct-icon add-icon" style="height:30px; width:40px;"></span>
+            <div class="pl-2">
+              <p class="cntct-head m-0">Head Office</p>
+              <p class="m-0">Madav Road, Varanasi, Uttar Pradesh, India</p>
+            </div>
+          </div><!-- Address end -->
+          <div class="d-flex pb-2">
+            <!-- Phone -->
+            <span class="fa fa-phone cntct-icon"></span>
+            <div class="pl-2">
+              <p class="cntct-head m-0">Phone Number</p>
+              <p class="m-0">(+91) 95832 22647</p>
+              <p class="m-0">(+91) 99456 919267</p>
+            </div>
+          </div><!-- Phone end  -->
+          <div class="d-flex pb-2">
+            <!-- Email -->
+            <span class="fa fa-envelope cntct-icon"></span>
+            <div class="pl-2">
+              <p class="cntct-head m-0">Email</p>
+              <p class="m-0">contact@shivafoundation.in</p>
+              <p class="m-0">www.shivafoundation.in</p>
+            </div>
+          </div><!-- Email end -->
+        </div><!-- Footer conatct us end -->
+      </div>
+    </div>
+  </div>
+  <div class="ftr-copyryt">
+    <!-- Footer copyright -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+          <p class="m-0" style="flex:1">Copyright &copy;2019 Shiva Foundation - All Rights Reserved</p>
+        </div>
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12 dvlp-by">
+          <p class="m-0">Designed & Developed by Prakalpana Technologies</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- Footer copyright End-->
+</section>

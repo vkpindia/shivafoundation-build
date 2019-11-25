@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  margin: 0;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  display: block !important;
+}
+
+.content-head {
+  // margin-bottom: 20px;
+  .txt-heading {
+    position: relative;
+    font-weight: bold;
+    // font-size: 2.3rem;
+  }
+  .heading-separator {
+    width: 120px;
+    background: #cccccc;
+    height: 1px;
+    margin: 0px auto;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background: #ff7107;
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+    }
+    &:before {
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      border: 1px solid #000000;
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+    }
+  }
+}
+
+.heading-after{
+  // font-size: 30px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+  &:after {
+    background-color: #ff7107;
+    bottom: 13px;
+    content: '';
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    width: 70px;
+    top: 100%;
+  }
+}
+
+.carousel-item.active {
+  z-index: 1;
+  opacity: 1;
+  transition-delay: 0.3s;
+  transform: none;
+  animation: slideFromLeft 0.3s;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.loader {
+  background-image: url(assets/images/logo.gif);
+}
+.bg-tranparent {
+  background: transparent;
+}
+.text-orengered {
+  color: #ff7107;
+}
+.bg-orengered {
+  background-color: #ff7107;
+}

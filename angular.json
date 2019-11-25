@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "projects": {
+    "shiva-foundation": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/shiva-foundation",
+      "sourceRoot": "apps/shiva-foundation/src",
+      "prefix": "shivafdn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/shiva-foundation",
+            "index": "apps/shiva-foundation/src/index.html",
+            "main": "apps/shiva-foundation/src/main.ts",
+            "polyfills": "apps/shiva-foundation/src/polyfills.ts",
+            "tsConfig": "apps/shiva-foundation/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/shiva-foundation/src/favicon.ico",
+              "apps/shiva-foundation/src/assets"
+            ],
+            "styles": [
+              "apps/shiva-foundation/src/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/font-awesome/scss/font-awesome.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/shiva-foundation/src/environments/environment.ts",
+                  "with": "apps/shiva-foundation/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/shiva-foundation/ngsw-config.json"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "shiva-foundation:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "shiva-foundation:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "shiva-foundation:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/shiva-foundation/tsconfig.app.json",
+              "apps/shiva-foundation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/shiva-foundation/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/shiva-foundation/jest.config.js",
+            "tsConfig": "apps/shiva-foundation/tsconfig.spec.json",
+            "setupFile": "apps/shiva-foundation/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "shiva-foundation-e2e": {
+      "root": "apps/shiva-foundation-e2e",
+      "sourceRoot": "apps/shiva-foundation-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/shiva-foundation-e2e/cypress.json",
+            "tsConfig": "apps/shiva-foundation-e2e/tsconfig.e2e.json",
+            "devServerTarget": "shiva-foundation:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "shiva-foundation:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/shiva-foundation-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/shiva-foundation-e2e/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "defaultProject": "shiva-foundation"
+}

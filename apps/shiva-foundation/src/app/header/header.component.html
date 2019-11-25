@@ -1,0 +1,87 @@
+<div #headerSection class="header-section" (scroll)="onWindowScroll($event)">
+  <!-- Header top start -->
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-wrapper">
+            <!-- Header section start -->
+            <div class="header-top-section">
+              <!-- header top left start -->
+              <div class="header-top-left">
+                <ul>
+                  <li>
+                    <i class="fa fa-envelope-o pr-2" aria-hidden="true"> </i>
+                    <p>
+                      <a href="javascript:;">contact@shivafoundation.in</a>
+                    </p>
+                  </li>
+                  &nbsp;<span class='text-white'>|</span>&nbsp;
+                  <li>
+                    <i class="fa fa-phone pr-2" aria-hidden="true"></i>
+                    <p>(91) 95832 22647</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- Header top left end -->
+
+              <!-- Header top right start -->
+              <div class="header-top-right">
+                <!-- <ul class="admin-area">
+                          <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i><span>login</span></a></li>
+                          <li><a href="register.html"><i class="fa fa-user-plus" aria-hidden="true"></i><span>Register</span></a></li>
+                      </ul> -->
+                <ul *ngIf="socialIcon && socialIcon.length" class="social-link-list  social-link-list1">
+                  <li *ngFor="let icon of socialIcon">
+                    <a href="javascript:;"><i [class]="'fa'+' '+icon"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Header top right end -->
+            </div>
+            <!-- Header section end -->
+          </div>
+          <!-- section-wrapper -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header top end -->
+
+  <!-- Header bottom start -->
+  <div class="header-bottom header header-wrapper">
+    <nav class="navbar navbar-default navbar-expand-lg">
+      <div class="container">
+        <div class="d-flex w-100">
+          <div class="col-md-12">
+            <div class="navbar-menu">
+              <div class="navbar-header">
+                <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+                <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                  &#9776;
+                </button>
+                <a class="navbar-brand" [routerLink]="navLinks[0].routePath"><img src="assets/images/logo.png" alt="logo"></a>
+                <!-- <a class="navbar-brand" href="javascript:;" style="color: #000000;font-weight: 600;font-size: 25px;font-family: cursive; padding: 25px 20px"><span style="color:#ff7107">SHIVA</span> FOUNDATION</a> -->
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div *ngIf="navLinks && navLinks.length" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li *ngFor="let link of navLinks" class="nav-item">
+                    <a class="nav-link" [routerLink]="link.routePath" routerLinkActive="active-link">{{link.displayName}}
+                      <!-- <span class="sr-only">(current)</span> --></a>
+                  </li>
+                </ul>
+                <div class="donate-button">
+                  <!-- <button type="button" data-toggle="modal" data-target="#donate-popup">donate<br> now</button> -->
+                  <button type="button">donate<br> now</button>
+                </div>
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- header-bottom end -->
+</div>
