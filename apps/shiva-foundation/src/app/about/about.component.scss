@@ -24,6 +24,11 @@
   .content-block {
     background-color: #f8f8f8;
     padding: 50px 0;
+    .cman-pic{
+      img{
+        width: 100%;
+      }
+    }
     h3 {
       // font-size: 30px;
       font-weight: bold;
@@ -41,15 +46,12 @@
       }
     }
     p {
-      // text-alig;
+      font-size: 14px;
     }
   }
 }
 .about-section02 {
   padding: 50px 0;
-  h3{
-
-  }
   .our-programs {
     padding-top: 20px;
     .our-programs-inner {
@@ -68,9 +70,35 @@
     }
   }
 }
-.about-section03{
-  .gallery{
-    padding: 50px 0;
+.about-section03 {
+  .gallery {
+    padding: 30px 0;
     background-color: #f8f8f8;
+  }
+}
+p {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .chm-headign{
+    margin-top: 10px;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+  h5{
+    font-size: 16px !important;
+  }
+  .txt-heading {
+    font-size: 22px !important;
+  }
+  .content-block {
+    padding: 30px 0 !important;
+  }
+  .about-section02 {
+    padding: 30px 0 !important;
+  }
+  .gallery {
+    padding: 30px 0 !important;
   }
 }

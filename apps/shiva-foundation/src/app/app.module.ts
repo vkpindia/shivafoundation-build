@@ -13,6 +13,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ContactComponent } from './contact/contact.component';
 import { DonorsComponent } from './donors/donors.component';
 import { BlogComponent } from './blog/blog.component';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BlogComponent } from './blog/blog.component';
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MainRoutingModule,
-    NgbModule
+    NgbModule,
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
