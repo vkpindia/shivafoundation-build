@@ -10,8 +10,8 @@ import { DOCUMENT } from '@angular/common';
 export class GalleryComponent implements OnInit {
   public slideIndex = 1;
   constructor(private renderer: Renderer2
-    ,private elRef: ElementRef
-    ,@Inject(DOCUMENT) private document: Document) { }
+    , private elRef: ElementRef
+    , @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
     this.showSlides(this.slideIndex);
@@ -48,9 +48,10 @@ export class GalleryComponent implements OnInit {
    */
   showSlides(n) {
     let i: number;
-    const slides = this.document.getElementsByClassName("mySlides");
-    const dots = this.document.getElementsByClassName("demo");
-    const captionText = this.document.getElementsByClassName("caption");
+    const slides = this.elRef.nativeElement.querySelectorAll(".mySlides");
+    const dots = this.elRef.nativeElement.querySelectorAll(".demo");
+    const captionText = this.elRef.nativeElement.querySelectorAll(".caption");
+    console.log('slides', slides);
     if (n > slides.length) {
       this.slideIndex = 1;
     }
@@ -61,10 +62,10 @@ export class GalleryComponent implements OnInit {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[this.slideIndex - 1].style.display = "block";
-    dots[this.slideIndex - 1].className += " active";
-    // captionText.innerHTML = dots[this.slideIndex - 1].alt;
+    dots[this.slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[this.slideIndex - 1].alt;
   }
 }
