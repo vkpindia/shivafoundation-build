@@ -1,5 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -11,8 +10,7 @@ import { DOCUMENT } from '@angular/common';
 export class GalleryComponent implements OnInit {
   public slideIndex = 1;
   constructor(private renderer: Renderer2
-    , private elRef: ElementRef
-    , @Inject(DOCUMENT) private document: Document) { }
+    , private elRef: ElementRef) { }
 
   ngOnInit() {
     this.showSlides(this.slideIndex);

@@ -16,7 +16,7 @@
           <h4>Quick <span class="text-orengered">Links</span></h4><!-- Heading -->
           <ul class="footer-nav">
             <li *ngFor="let link of navLinks">
-              <a href="" [routerLink]="link.routePath">{{link.displayName}}</a>
+              <a [routerLink]="'/'+link.routePath">{{link.displayName}}</a>
             </li>
           </ul>
         </div><!-- Footer navigation end -->

@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { nvigationLink } from './nav';
-import { NavItems } from './nav-type';
+import { NavItems } from '../../models/nav-type';
+import { nvigationLink } from '../../models/nav';
 
 @Component({
   selector: 'shivafdn-hav',
@@ -15,7 +14,7 @@ export class NavComponent implements OnInit {
   public socialIcon: Array<any>;
   public navLinks: Array<NavItems>;
 
-  constructor(@Inject(DOCUMENT) private document) { }
+  constructor() { }
 
   ngOnInit() {
     this.isMenuCollapsed = true;

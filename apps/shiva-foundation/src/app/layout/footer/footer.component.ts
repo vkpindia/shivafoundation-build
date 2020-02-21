@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { nvigationLink } from '../header/nav';
-import { NavItems } from '../header/nav-type';
+import { nvigationLink } from '../../models/nav';
+import { NavItems } from '../../models/nav-type';
 
 @Component({
   selector: 'shivafdn-footer',
