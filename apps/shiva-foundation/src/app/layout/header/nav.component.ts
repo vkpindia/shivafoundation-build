@@ -4,11 +4,11 @@ import { nvigationLink } from './nav';
 import { NavItems } from './nav-type';
 
 @Component({
-  selector: 'shivafdn-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'shivafdn-hav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class NavComponent implements OnInit {
 
   @ViewChild('headerSection', {static: false}) headerSection: ElementRef
   public isMenuCollapsed: boolean;

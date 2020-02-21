@@ -67,7 +67,7 @@
               <div *ngIf="navLinks && navLinks.length" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li *ngFor="let link of navLinks" class="nav-item">
-                    <a class="nav-link" [routerLink]="link.routePath" routerLinkActive="active-link">{{link.displayName}}
+                    <a class="nav-link" [routerLink]="'/'+link.routePath" routerLinkActive="active-link">{{link.displayName}}
                       <!-- <span class="sr-only">(current)</span> --></a>
                   </li>
                 </ul>

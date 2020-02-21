@@ -1,5 +1,6 @@
 <ngb-carousel #carousel interval="3000" [pauseOnHover]="true" [showNavigationIndicators]="false">
   <ng-template ngbSlide *ngFor="let img of carouselImages; index as i">
+    {{img.alt}}
     <div class="carousel-caption">
       <h1>Making A <span class='text-orengered'>Difference</span></h1>
       <p>Learn about our passionate team, and how you can <span class='text-orengered'>help!</span></p>
@@ -97,7 +98,8 @@
         <div class="heading-separator"></div>
       </div>
       <div class="py-text">
-        <p class="text-white m-0">Your support and contributions will enable us to meet our goals and improve conditions.</p>
+        <p class="text-white m-0">Your support and contributions will enable us to meet our goals and improve
+          conditions.</p>
         <p class="text-white m-0">Your generous donation will fund our mission.</p>
       </div>
       <div class="py-btn">
