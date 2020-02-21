@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DonorsComponent } from './donors/donors.component';
 import { BlogComponent } from './blog/blog.component';
 import { GalleryModule } from './gallery/gallery.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { GalleryModule } from './gallery/gallery.module';
     NgbModule,
     GalleryModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

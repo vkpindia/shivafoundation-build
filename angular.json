@@ -15,6 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "rebaseRootRelativeCssUrls": true,
             "outputPath": "dist/apps/shiva-foundation",
             "index": "apps/shiva-foundation/src/index.html",
             "main": "apps/shiva-foundation/src/main.ts",

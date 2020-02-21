@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2, ElementRef, Inject } from '@angular/core'
 import { DOCUMENT } from '@angular/common';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'shivafdn-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
