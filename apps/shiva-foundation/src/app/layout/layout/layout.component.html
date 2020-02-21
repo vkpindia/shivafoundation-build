@@ -1,11 +1,20 @@
 <!-- App Navingation -->
-<shivafdn-hav></shivafdn-hav>
+<header>
+  <shivafdn-hav></shivafdn-hav>
+</header>
 <!-- App Navingation End-->
 
 <!-- App Navingation -->
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+  <div class="subscribe-form" *ngIf="showForm">
+    <shivafdn-subscribe></shivafdn-subscribe>
+  </div>
+</main>
 <!-- App Navingation End-->
 
 <!-- App Navingation -->
-<shivafdn-footer></shivafdn-footer>
+<footer>
+  <shivafdn-footer></shivafdn-footer>
+</footer>
 <!-- App Navingation End-->

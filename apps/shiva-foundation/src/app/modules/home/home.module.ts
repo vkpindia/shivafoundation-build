@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NgbModule,
+    NgbCarouselModule
   ]
 })
 export class HomeModule { }

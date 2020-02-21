@@ -10,6 +10,8 @@ import { MainRoutingModule } from './routes/main-routing.module';
 import { NavComponent } from './layout/header/nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout/layout.component';
+import { SfFormModule } from './modules/sf-form/sf-form.module';
+import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 // import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
@@ -17,13 +19,15 @@ import { LayoutComponent } from './layout/layout/layout.component';
     AppComponent,
     LayoutComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MainRoutingModule,
-    NgbModule
+    NgbModule,
+    SfFormModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref }],
   bootstrap: [AppComponent]
