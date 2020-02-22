@@ -10,5 +10,14 @@
   }
   .scbr-section{
     padding-top: 50px;
+    @media (max-width: 767px) {
+      padding: 20px 0;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 30px 0;
+    .txt-heading{
+      font-size: 22px;
+    }
   }
 }

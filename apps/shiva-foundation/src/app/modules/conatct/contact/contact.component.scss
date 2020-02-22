@@ -1,0 +1,111 @@
+.contact-body {
+  // margin-top: 50px;
+  padding: 50px 0;
+  /* background-image: linear-gradient(-66deg, #3f00ffc2 45%, #5801ccdb 40%),
+    url('../../../../assets/images/Contact-us.jpg'); */
+  background-image: linear-gradient(-66deg, #dddddd2e 45%, #ffffffed 40%),
+    url('../../../../assets/images/Contact-us.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  p {
+    color: #000000;
+    font-size: 14px;
+  }
+
+  .contact-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    .adddress,
+    .phone,
+    .email,
+    .website {
+      padding: 12px 0;
+      @media (max-width: 767px) {
+        padding: 5px 0;
+        font-size: 14px;
+      }
+    }
+    a {
+      // color: #ffffff;
+      color: #000000;
+    }
+    @media (max-width: 767px) {
+      justify-content: left;
+      padding-top: 30px;
+      padding-left: 15px;
+    }
+  }
+  .volunteer {
+    text-align: center;
+    padding-top: 20px;
+    a {
+      display: inline-block;
+      background-color: #ff7107;
+      border: 1px solid #ff7107;
+      padding: 8px 22px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      &:hover {
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+  h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+    &:after {
+      background-color: #ff7107;
+      bottom: 0px;
+      content: '';
+      height: 1px;
+      position: absolute;
+      left: 0px;
+      width: 100px;
+    }
+    @media (max-width: 767px) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 30px 0;
+  }
+}
+
+.contact-map {
+  // padding: 50px 0;
+  border-bottom: 5px solid #ff7107;
+  border-top: 5px solid #ff7107;
+   background-color: #ddd;
+  .mapouter {
+    position: relative;
+    text-align: right;
+    height: 400px;
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 400px;
+    width: 100%;
+  }
+  @media(max-width: 767px){
+    .mapouter {
+      height: 250px;
+    }
+    .gmap_canvas {
+      height: 250px;
+    }
+  }
+}

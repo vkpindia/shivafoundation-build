@@ -17,7 +17,39 @@ body {
   z-index: 0;
   display: block !important;
 }
-
+.head-section {
+  margin-top: 60px;
+  .about-head {
+    background-image: linear-gradient(
+        0deg,
+        rgba(6, 13, 1, 0.6),
+        rgba(6, 13, 1, 0.6)
+      ),
+      url('./assets/images/banner-02.jpg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px solid #ff7107;
+    // margin-bottom: 20px;
+    .heading {
+      /* position: relative;
+      top: 80px; */
+      h2 {
+        font-weight: bold;
+      }
+    }
+    @media (max-width: 767px) {
+      min-height: 200px;
+      h2 {
+        font-size: 27px;
+      }
+    }
+  }
+}
 .content-head {
   // margin-bottom: 20px;
   .txt-heading {
@@ -61,7 +93,7 @@ body {
   }
 }
 
-.heading-after{
+.heading-after {
   // font-size: 30px;
   padding-bottom: 5px;
   font-weight: bold;

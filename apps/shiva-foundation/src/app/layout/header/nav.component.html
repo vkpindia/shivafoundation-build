@@ -1,4 +1,4 @@
-<div #headerSection class="header-section" (scroll)="onWindowScroll($event)">
+<div #headerSection class="header-section" (scroll)="onWindowScroll($event)" [ngClass]="addClass? 'nav-top': ''">
   <!-- Header top start -->
   <div class="header-top">
     <div class="container">

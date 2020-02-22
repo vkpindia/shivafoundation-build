@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 export class LayoutComponent implements OnInit {
 
   public showForm: boolean;
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _eleRef: ElementRef) { }
 
   ngOnInit() {
     this.showForm = true;
@@ -22,6 +22,7 @@ export class LayoutComponent implements OnInit {
           this.showForm = false;
         } else {
           this.showForm = true;
+          // this._eleRef.nativeElement.querySelector('.header-section').classList.add('menu-fixed');
         }
       }
     });

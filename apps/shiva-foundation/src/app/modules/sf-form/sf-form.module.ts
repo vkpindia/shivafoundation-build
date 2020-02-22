@@ -6,13 +6,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [SfFormsComponent],
+  declarations: [
+    SfFormsComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule
   ],
-  exports: [SfFormsComponent]
+  exports: [
+    SfFormsComponent
+  ]
 })
 
 export class SfFormModule { }

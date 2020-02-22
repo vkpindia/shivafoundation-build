@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     const bases = this._document.getElementsByTagName('base');
 
     if (bases.length > 0) {
-      bases[0].setAttribute('href', environment.baseHref);
+      // bases[0].setAttribute('href', environment.baseHref);
     }
 
     this._router.events.subscribe((event: Event) => {

@@ -183,6 +183,7 @@ iframe {
 [ Contact more ]*/
 .contact100-more {
   width: 50%;
+  background-image: url(../../../../assets/images/left_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -308,8 +309,14 @@ textarea.input100 {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.4s;
+  background: #009bff;
+  background: linear-gradient(to left ,#0072ff,#00c6ff);
+  font-weight: bold;
 }
-
+.contact100-form-btn:hover {
+  background: #009bff;
+  background: linear-gradient(to left ,#00c6ff,#0072ff);
+}
 
 /*------------------------------------------------------------------
 [ Responsive ]*/

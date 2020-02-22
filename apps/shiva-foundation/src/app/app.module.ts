@@ -29,7 +29,7 @@ import { SubscribeComponent } from './modules/subscribe/subscribe.component';
     NgbModule,
     SfFormModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: environment.baseHref }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
